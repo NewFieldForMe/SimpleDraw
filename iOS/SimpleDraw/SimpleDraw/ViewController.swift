@@ -31,8 +31,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     // MARK: - UICollectionView
-    @available(iOS 11.0, *)
-    @available(iOS 11.0, *)
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DrawSelectorCollectionViewCell", for: indexPath) as? DrawSelectorCollectionViewCell
         cell?.imageView.image = UIImage(named: "background1")?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)

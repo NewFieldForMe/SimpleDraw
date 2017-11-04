@@ -48,7 +48,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pa2-S9-faU" userLabel="drawView">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pa2-S9-faU" userLabel="drawView" customClass="drawImageView" customModule="SimpleDraw" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
                                     </imageView>
                                 </subviews>

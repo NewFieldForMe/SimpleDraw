@@ -11,6 +11,7 @@
 		9289045A1FAD6935006EFDDF /* DrawSelectorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928904591FAD6935006EFDDF /* DrawSelectorCollectionViewCell.swift */; };
 		9289045D1FAD8042006EFDDF /* ColorSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9289045C1FAD8042006EFDDF /* ColorSettings.swift */; };
 		9289045F1FAD851D006EFDDF /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9289045E1FAD851D006EFDDF /* UIColorExtension.swift */; };
+		928904611FADA441006EFDDF /* drawImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928904601FADA441006EFDDF /* drawImageView.swift */; };
 		92D22A791FAC12C400715487 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D22A781FAC12C400715487 /* AppDelegate.swift */; };
 		92D22A7B1FAC12C400715487 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D22A7A1FAC12C400715487 /* ViewController.swift */; };
 		92D22A7E1FAC12C400715487 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92D22A7C1FAC12C400715487 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		928904591FAD6935006EFDDF /* DrawSelectorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawSelectorCollectionViewCell.swift; sourceTree = "<group>"; };
 		9289045C1FAD8042006EFDDF /* ColorSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSettings.swift; sourceTree = "<group>"; };
 		9289045E1FAD851D006EFDDF /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		928904601FADA441006EFDDF /* drawImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = drawImageView.swift; sourceTree = "<group>"; };
 		92D22A751FAC12C400715487 /* SimpleDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D22A781FAC12C400715487 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92D22A7A1FAC12C400715487 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			children = (
 				928904571FAD691F006EFDDF /* DrawSelectorCollectionViewCell.xib */,
 				928904591FAD6935006EFDDF /* DrawSelectorCollectionViewCell.swift */,
+				928904601FADA441006EFDDF /* drawImageView.swift */,
 			);
 			path = UIParts;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				928904611FADA441006EFDDF /* drawImageView.swift in Sources */,
 				92D22A7B1FAC12C400715487 /* ViewController.swift in Sources */,
 				92D22A791FAC12C400715487 /* AppDelegate.swift in Sources */,
 				9289045F1FAD851D006EFDDF /* UIColorExtension.swift in Sources */,
