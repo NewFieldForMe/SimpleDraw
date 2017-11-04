@@ -20,15 +20,15 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1" translatesAutoresizingMaskIntoConstraints="NO" id="m6A-UP-CkY">
-                        <rect key="frame" x="0.0" y="0.0" width="124" height="115"/>
+                        <rect key="frame" x="8" y="8" width="108" height="99"/>
                     </imageView>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="m6A-UP-CkY" firstAttribute="leading" secondItem="B2O-mm-BEe" secondAttribute="leading" id="BrT-YA-OUT"/>
-                <constraint firstAttribute="bottom" secondItem="m6A-UP-CkY" secondAttribute="bottom" id="JC4-gC-lpg"/>
-                <constraint firstItem="m6A-UP-CkY" firstAttribute="top" secondItem="B2O-mm-BEe" secondAttribute="top" id="KCu-1x-qnn"/>
-                <constraint firstAttribute="trailing" secondItem="m6A-UP-CkY" secondAttribute="trailing" id="d23-Ev-hdp"/>
+                <constraint firstItem="m6A-UP-CkY" firstAttribute="leading" secondItem="B2O-mm-BEe" secondAttribute="leading" constant="8" id="BrT-YA-OUT"/>
+                <constraint firstAttribute="bottom" secondItem="m6A-UP-CkY" secondAttribute="bottom" constant="8" id="JC4-gC-lpg"/>
+                <constraint firstItem="m6A-UP-CkY" firstAttribute="top" secondItem="B2O-mm-BEe" secondAttribute="top" constant="8" id="KCu-1x-qnn"/>
+                <constraint firstAttribute="trailing" secondItem="m6A-UP-CkY" secondAttribute="trailing" constant="8" id="d23-Ev-hdp"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="VT4-nh-WpV"/>
             <size key="customSize" width="124" height="115"/>

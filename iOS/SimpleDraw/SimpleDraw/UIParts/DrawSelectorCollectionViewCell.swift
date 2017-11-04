@@ -19,4 +19,10 @@ class DrawSelectorCollectionViewCell: UICollectionViewCell {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
     }
+    
+    func layoutSetup() {
+        imageView.layer.borderWidth = 3.0
+        imageView.layer.cornerRadius = 10.0
+        imageView.layer.masksToBounds = true
+    }
 }

@@ -21,6 +21,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         self.drawSelectorCollectionView.dataSource = self
         self.drawSelectorCollectionView.delegate = self;
+        
+        drawSelectorCollectionView.backgroundColor = UIColor(patternImage: UIImage(named: "transparent")!)
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,7 +36,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DrawSelectorCollectionViewCell", for: indexPath) as? DrawSelectorCollectionViewCell
         cell?.imageView.image = UIImage(named: "background1")?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+        
         cell?.imageView.tintColor = ColorSettings.shared.Colors[indexPath.row]
+        cell?.layoutSetup()
+        
         return cell!
     }
     
