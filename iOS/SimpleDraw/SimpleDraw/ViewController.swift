@@ -12,6 +12,7 @@ import UIKit
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UITableViewDelegate {
     
     @IBOutlet weak var drawSelectorCollectionView: UICollectionView!
+    @IBOutlet weak var drawImageView: DrawImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +50,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: self.drawSelectorCollectionView.frame.height, height: self.drawSelectorCollectionView.frame.height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        drawImageView.currentColor = ColorSettings.shared.Colors[indexPath.row]
     }
     
 }

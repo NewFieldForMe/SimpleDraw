@@ -8,10 +8,11 @@
 
 import UIKit
 
-class drawImageView: UIImageView {
+class DrawImageView: UIImageView {
     
     var lastPoint: CGPoint!
     var bezier: UIBezierPath!
+    var currentColor: UIColor?
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         lastPoint = touches.first!.location(in: self)
@@ -23,6 +24,7 @@ class drawImageView: UIImageView {
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         lastPoint = touches.first!.location(in: self)
         bezier.addLine(to: lastPoint)
+        drawLine()
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -30,10 +32,13 @@ class drawImageView: UIImageView {
     }
     
     private func drawLine() {
+        guard let color = currentColor else {
+            return
+        }
         UIGraphicsBeginImageContextWithOptions(self.frame.size, false, 0)
         self.image?.draw(at: CGPoint(x: 0, y: 0))
-        UIColor.red.setStroke()
-        bezier.lineWidth = 3
+        color.setStroke()
+        bezier.lineWidth = 5
         bezier.stroke()
         let image = UIGraphicsGetImageFromCurrentImageContext()
         self.image = image

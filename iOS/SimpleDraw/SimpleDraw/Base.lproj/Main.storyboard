@@ -48,7 +48,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pa2-S9-faU" userLabel="drawView" customClass="drawImageView" customModule="SimpleDraw" customModuleProvider="target">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pa2-S9-faU" userLabel="drawView" customClass="DrawImageView" customModule="SimpleDraw" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
                                     </imageView>
                                 </subviews>
@@ -74,6 +74,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="drawImageView" destination="pa2-S9-faU" id="Phd-DA-KJa"/>
                         <outlet property="drawSelectorCollectionView" destination="sit-1K-eCr" id="2lp-Ww-lop"/>
                     </connections>
                 </viewController>
