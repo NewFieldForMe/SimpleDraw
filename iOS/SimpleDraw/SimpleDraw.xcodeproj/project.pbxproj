@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		928904581FAD691F006EFDDF /* DrawSelectorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 928904571FAD691F006EFDDF /* DrawSelectorCollectionViewCell.xib */; };
 		9289045A1FAD6935006EFDDF /* DrawSelectorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928904591FAD6935006EFDDF /* DrawSelectorCollectionViewCell.swift */; };
+		9289045D1FAD8042006EFDDF /* ColorSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9289045C1FAD8042006EFDDF /* ColorSettings.swift */; };
+		9289045F1FAD851D006EFDDF /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9289045E1FAD851D006EFDDF /* UIColorExtension.swift */; };
 		92D22A791FAC12C400715487 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D22A781FAC12C400715487 /* AppDelegate.swift */; };
 		92D22A7B1FAC12C400715487 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D22A7A1FAC12C400715487 /* ViewController.swift */; };
 		92D22A7E1FAC12C400715487 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92D22A7C1FAC12C400715487 /* Main.storyboard */; };
@@ -38,6 +40,8 @@
 /* Begin PBXFileReference section */
 		928904571FAD691F006EFDDF /* DrawSelectorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrawSelectorCollectionViewCell.xib; sourceTree = "<group>"; };
 		928904591FAD6935006EFDDF /* DrawSelectorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawSelectorCollectionViewCell.swift; sourceTree = "<group>"; };
+		9289045C1FAD8042006EFDDF /* ColorSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSettings.swift; sourceTree = "<group>"; };
+		9289045E1FAD851D006EFDDF /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		92D22A751FAC12C400715487 /* SimpleDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D22A781FAC12C400715487 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92D22A7A1FAC12C400715487 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +91,15 @@
 			path = UIParts;
 			sourceTree = "<group>";
 		};
+		9289045B1FAD802B006EFDDF /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				9289045C1FAD8042006EFDDF /* ColorSettings.swift */,
+				9289045E1FAD851D006EFDDF /* UIColorExtension.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		92D22A6C1FAC12C300715487 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +123,7 @@
 		92D22A771FAC12C400715487 /* SimpleDraw */ = {
 			isa = PBXGroup;
 			children = (
+				9289045B1FAD802B006EFDDF /* Util */,
 				928904561FAD68F2006EFDDF /* UIParts */,
 				92D22A781FAC12C400715487 /* AppDelegate.swift */,
 				92D22A7A1FAC12C400715487 /* ViewController.swift */,
@@ -276,6 +290,8 @@
 			files = (
 				92D22A7B1FAC12C400715487 /* ViewController.swift in Sources */,
 				92D22A791FAC12C400715487 /* AppDelegate.swift in Sources */,
+				9289045F1FAD851D006EFDDF /* UIColorExtension.swift in Sources */,
+				9289045D1FAD8042006EFDDF /* ColorSettings.swift in Sources */,
 				9289045A1FAD6935006EFDDF /* DrawSelectorCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
