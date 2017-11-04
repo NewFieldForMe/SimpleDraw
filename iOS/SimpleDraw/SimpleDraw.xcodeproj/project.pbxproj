@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		928904581FAD691F006EFDDF /* DrawSelectorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 928904571FAD691F006EFDDF /* DrawSelectorCollectionViewCell.xib */; };
+		9289045A1FAD6935006EFDDF /* DrawSelectorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928904591FAD6935006EFDDF /* DrawSelectorCollectionViewCell.swift */; };
 		92D22A791FAC12C400715487 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D22A781FAC12C400715487 /* AppDelegate.swift */; };
 		92D22A7B1FAC12C400715487 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D22A7A1FAC12C400715487 /* ViewController.swift */; };
 		92D22A7E1FAC12C400715487 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92D22A7C1FAC12C400715487 /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		928904571FAD691F006EFDDF /* DrawSelectorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrawSelectorCollectionViewCell.xib; sourceTree = "<group>"; };
+		928904591FAD6935006EFDDF /* DrawSelectorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawSelectorCollectionViewCell.swift; sourceTree = "<group>"; };
 		92D22A751FAC12C400715487 /* SimpleDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D22A781FAC12C400715487 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92D22A7A1FAC12C400715487 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +78,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		928904561FAD68F2006EFDDF /* UIParts */ = {
+			isa = PBXGroup;
+			children = (
+				928904571FAD691F006EFDDF /* DrawSelectorCollectionViewCell.xib */,
+				928904591FAD6935006EFDDF /* DrawSelectorCollectionViewCell.swift */,
+			);
+			path = UIParts;
+			sourceTree = "<group>";
+		};
 		92D22A6C1FAC12C300715487 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +110,7 @@
 		92D22A771FAC12C400715487 /* SimpleDraw */ = {
 			isa = PBXGroup;
 			children = (
+				928904561FAD68F2006EFDDF /* UIParts */,
 				92D22A781FAC12C400715487 /* AppDelegate.swift */,
 				92D22A7A1FAC12C400715487 /* ViewController.swift */,
 				92D22A7C1FAC12C400715487 /* Main.storyboard */,
@@ -233,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92D22A831FAC12C400715487 /* LaunchScreen.storyboard in Resources */,
+				928904581FAD691F006EFDDF /* DrawSelectorCollectionViewCell.xib in Resources */,
 				92D22A801FAC12C400715487 /* Assets.xcassets in Resources */,
 				92D22A7E1FAC12C400715487 /* Main.storyboard in Resources */,
 			);
@@ -261,6 +276,7 @@
 			files = (
 				92D22A7B1FAC12C400715487 /* ViewController.swift in Sources */,
 				92D22A791FAC12C400715487 /* AppDelegate.swift in Sources */,
+				9289045A1FAD6935006EFDDF /* DrawSelectorCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
