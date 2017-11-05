@@ -89,6 +89,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         if indexPath.section == 0 {
             DrawModeManager.shared.DrawMode = DrawModeManager.DrawModeEnum(rawValue: indexPath.row)!
             drawSelectorCollectionView.reloadData()
+            switch DrawModeManager.shared.DrawMode {
+            case .AllErase:
+                allErase()
+            default: break
+            }
         } else if indexPath.section == 1 {
             switch DrawModeManager.shared.DrawMode {
             case .ColorSelect:
@@ -100,5 +105,23 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
+    }
+    
+    private func allErase() {
+        let alert = UIAlertController(title: "確認", message: "全消去します。\nよろしいですか？", preferredStyle: UIAlertControllerStyle.alert)
+        let ok = UIAlertAction(title: "OK", style: UIAlertActionStyle.default){ (action: UIAlertAction) in
+            UIView.transition(with: self.drawImageView, duration: 1.0, options: [.transitionCurlUp], animations: {
+                self.drawImageView.isHidden = true
+            }) { _ in
+                self.drawImageView.image = nil
+                self.drawImageView.isHidden = false
+                DrawModeManager.shared.DrawMode = .ColorSelect
+                self.drawSelectorCollectionView.reloadData()
+            }
+        }
+        let cancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)
+        alert.addAction(ok)
+        alert.addAction(cancel)
+        self.present(alert, animated: true, completion: nil)
     }
 }
