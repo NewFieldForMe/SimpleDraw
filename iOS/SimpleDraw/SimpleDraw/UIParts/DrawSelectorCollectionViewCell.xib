@@ -19,26 +19,34 @@
                 <rect key="frame" x="0.0" y="0.0" width="124" height="115"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1" translatesAutoresizingMaskIntoConstraints="NO" id="m6A-UP-CkY">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m6A-UP-CkY">
                         <rect key="frame" x="8" y="8" width="108" height="99"/>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3c0-ie-Hh3">
+                        <rect key="frame" x="8" y="8" width="108" height="99"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="3c0-ie-Hh3" firstAttribute="leading" secondItem="m6A-UP-CkY" secondAttribute="leading" id="4BQ-6G-4CG"/>
                 <constraint firstItem="m6A-UP-CkY" firstAttribute="leading" secondItem="B2O-mm-BEe" secondAttribute="leading" constant="8" id="BrT-YA-OUT"/>
                 <constraint firstAttribute="bottom" secondItem="m6A-UP-CkY" secondAttribute="bottom" constant="8" id="JC4-gC-lpg"/>
                 <constraint firstItem="m6A-UP-CkY" firstAttribute="top" secondItem="B2O-mm-BEe" secondAttribute="top" constant="8" id="KCu-1x-qnn"/>
+                <constraint firstItem="3c0-ie-Hh3" firstAttribute="trailing" secondItem="m6A-UP-CkY" secondAttribute="trailing" id="WVQ-4O-tF4"/>
+                <constraint firstItem="3c0-ie-Hh3" firstAttribute="bottom" secondItem="m6A-UP-CkY" secondAttribute="bottom" id="XTM-y2-5bC"/>
                 <constraint firstAttribute="trailing" secondItem="m6A-UP-CkY" secondAttribute="trailing" constant="8" id="d23-Ev-hdp"/>
+                <constraint firstItem="3c0-ie-Hh3" firstAttribute="top" secondItem="m6A-UP-CkY" secondAttribute="top" id="gMW-ar-hI0"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="VT4-nh-WpV"/>
             <size key="customSize" width="124" height="115"/>
             <connections>
                 <outlet property="imageView" destination="m6A-UP-CkY" id="gFT-1i-tBm"/>
+                <outlet property="titleLabel" destination="3c0-ie-Hh3" id="bN2-7K-4gz"/>
             </connections>
             <point key="canvasLocation" x="-61" y="-98.5"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="background1" width="1280" height="894"/>
-    </resources>
 </document>

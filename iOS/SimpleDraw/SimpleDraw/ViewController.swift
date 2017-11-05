@@ -34,16 +34,40 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     // MARK: - UICollectionView
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DrawSelectorCollectionViewCell", for: indexPath) as? DrawSelectorCollectionViewCell
-        cell?.imageView.image = UIImage(named: "background1")?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
         
-        cell?.imageView.tintColor = ColorSettings.shared.Colors[indexPath.row]
         cell?.layoutSetup()
+
+        if indexPath.section == 0 {
+            switch indexPath.row {
+            case 0:
+                cell?.settingSetup(settingMode: DrawModeManager.DrawModeEnum.ColorSelect)
+            case 1:
+                cell?.settingSetup(settingMode: DrawModeManager.DrawModeEnum.ThicknessSelect)
+            case 2:
+                cell?.settingSetup(settingMode: DrawModeManager.DrawModeEnum.Eraser)
+            case 3:
+                cell?.settingSetup(settingMode: DrawModeManager.DrawModeEnum.AllErase)
+            default:
+                print("error")
+            }
+        } else if indexPath.section == 1 {
+            if DrawModeManager.shared.DrawMode == DrawModeManager.DrawModeEnum.ColorSelect {
+                cell?.colorSetup(color: ColorSettings.shared.Colors[indexPath.row])
+            }
+        }
         
         return cell!
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 14
+        switch(section){
+        case 0:
+            return 4
+        case 1:
+            return 14
+        default:
+            return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView,
@@ -56,4 +80,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         drawImageView.currentColor = ColorSettings.shared.Colors[indexPath.row]
     }
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
 }
