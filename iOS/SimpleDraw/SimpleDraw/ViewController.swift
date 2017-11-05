@@ -64,7 +64,16 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         case 0:
             return 4
         case 1:
-            return 14
+            switch DrawModeManager.shared.DrawMode {
+            case .ColorSelect:
+                return 14
+            case .Eraser:
+                return 0
+            case .ThicknessSelect:
+                return 10
+            case .AllErase:
+                return 0
+            }
         default:
             return 0
         }
@@ -77,7 +86,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        drawImageView.currentColor = ColorSettings.shared.Colors[indexPath.row]
+        if indexPath.section == 0 {
+            DrawModeManager.shared.DrawMode = DrawModeManager.DrawModeEnum(rawValue: indexPath.row)!
+            drawSelectorCollectionView.reloadData()
+        } else if indexPath.section == 1 {
+            if DrawModeManager.shared.DrawMode == .ColorSelect {
+                drawImageView.currentColor = ColorSettings.shared.Colors[indexPath.row]
+            }
+        }
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {

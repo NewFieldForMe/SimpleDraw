@@ -9,11 +9,11 @@
 import Foundation
 
 class DrawModeManager {
-    enum DrawModeEnum {
-        case ColorSelect
-        case ThicknessSelect
-        case Eraser
-        case AllErase
+    enum DrawModeEnum: Int {
+        case ColorSelect = 0
+        case ThicknessSelect = 1
+        case Eraser = 2
+        case AllErase = 3
     }
     
     var DrawMode: DrawModeEnum
