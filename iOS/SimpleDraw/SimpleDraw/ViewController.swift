@@ -90,8 +90,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             DrawModeManager.shared.DrawMode = DrawModeManager.DrawModeEnum(rawValue: indexPath.row)!
             drawSelectorCollectionView.reloadData()
         } else if indexPath.section == 1 {
-            if DrawModeManager.shared.DrawMode == .ColorSelect {
+            switch DrawModeManager.shared.DrawMode {
+            case .ColorSelect:
                 drawImageView.currentColor = ColorSettings.shared.Colors[indexPath.row]
+            default: break
             }
         }
     }

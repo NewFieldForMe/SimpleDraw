@@ -39,7 +39,11 @@ class DrawImageView: UIImageView {
         self.image?.draw(at: CGPoint(x: 0, y: 0))
         color.setStroke()
         bezier.lineWidth = 5
-        bezier.stroke()
+        if DrawModeManager.shared.DrawMode == .Eraser {
+            bezier.stroke(with: .clear, alpha: 0)
+        } else {
+            bezier.stroke()
+        }
         let image = UIGraphicsGetImageFromCurrentImageContext()
         self.image = image
         UIGraphicsEndImageContext()
