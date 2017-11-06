@@ -41,8 +41,6 @@ class DrawSelectorCollectionViewCell: UICollectionViewCell {
             titleLabel.text = "消し\nゴム"
         case DrawModeManager.DrawModeEnum.AllErase:
             titleLabel.text = "全\n消去"
-        default:
-            titleLabel.isHidden = false
         }
     }
     
@@ -53,7 +51,24 @@ class DrawSelectorCollectionViewCell: UICollectionViewCell {
     }
     
     func thicknessSetup(thickness: CGFloat) {
+        debugPrint(thickness)
         imageView.image = nil
         titleLabel.isHidden = true
+        imageView.backgroundColor = UIColor.white
+        
+        UIGraphicsBeginImageContextWithOptions(imageView.frame.size, false, 0)
+        let context = UIGraphicsGetCurrentContext()
+        imageView.image?.draw(at: CGPoint(x: 0, y: 0))
+        context!.setFillColor(UIColor.black.cgColor)
+        let center = CGPoint(x: imageView.frame.width / 2.0, y: imageView.frame.height / 2.0)
+        let rect = CGRect(x: center.x - (thickness / 2), y: center.y - (thickness / 2), width: thickness, height: thickness)
+        context!.fillEllipse(in: rect)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        imageView.image = image
+        UIGraphicsEndImageContext()
+    }
+    
+    override func prepareForReuse() {
+        imageView.image = nil
     }
 }

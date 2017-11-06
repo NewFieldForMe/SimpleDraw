@@ -38,7 +38,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         cell?.layoutSetup()
 
         if indexPath.section == 0 {
-            switch indexPath.row {
+            switch indexPath.item {
             case 0:
                 cell?.settingSetup(settingMode: DrawModeManager.DrawModeEnum.ColorSelect)
             case 1:
@@ -51,8 +51,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 print("error")
             }
         } else if indexPath.section == 1 {
-            if DrawModeManager.shared.DrawMode == DrawModeManager.DrawModeEnum.ColorSelect {
-                cell?.colorSetup(color: ColorSettings.shared.Colors[indexPath.row])
+            switch DrawModeManager.shared.DrawMode {
+            case .ColorSelect:
+                cell?.colorSetup(color: ColorSettings.shared.Colors[indexPath.item])
+            case .ThicknessSelect:
+                cell?.thicknessSetup(thickness: CGFloat(indexPath.item + 1) * 3.0)
+            default: break
             }
         }
         
@@ -87,7 +91,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.section == 0 {
-            DrawModeManager.shared.DrawMode = DrawModeManager.DrawModeEnum(rawValue: indexPath.row)!
+            DrawModeManager.shared.DrawMode = DrawModeManager.DrawModeEnum(rawValue: indexPath.item)!
             drawSelectorCollectionView.reloadData()
             switch DrawModeManager.shared.DrawMode {
             case .AllErase:
@@ -97,7 +101,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         } else if indexPath.section == 1 {
             switch DrawModeManager.shared.DrawMode {
             case .ColorSelect:
-                drawImageView.currentColor = ColorSettings.shared.Colors[indexPath.row]
+                drawImageView.currentColor = ColorSettings.shared.Colors[indexPath.item]
+            case .ThicknessSelect:
+                drawImageView.currentThickness = CGFloat(indexPath.item + 1) * 3.0
             default: break
             }
         }

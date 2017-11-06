@@ -13,11 +13,13 @@ class DrawImageView: UIImageView {
     var lastPoint: CGPoint!
     var bezier: UIBezierPath!
     var currentColor: UIColor?
+    var currentThickness: CGFloat = 3.0
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         lastPoint = touches.first!.location(in: self)
         bezier = UIBezierPath()
         bezier.lineCapStyle = CGLineCap.round
+        bezier.lineJoinStyle = .round
         bezier.move(to: lastPoint)
     }
     
@@ -38,7 +40,7 @@ class DrawImageView: UIImageView {
         UIGraphicsBeginImageContextWithOptions(self.frame.size, false, 0)
         self.image?.draw(at: CGPoint(x: 0, y: 0))
         color.setStroke()
-        bezier.lineWidth = 5
+        bezier.lineWidth = currentThickness
         if DrawModeManager.shared.DrawMode == .Eraser {
             bezier.stroke(with: .clear, alpha: 0)
         } else {
