@@ -14,8 +14,8 @@ class DrawModeManager {
         case ThicknessSelect = 1
         case Eraser = 2
         case AllErase = 3
+        case CartoonSelect = 4
     }
-    
     var DrawMode: DrawModeEnum
     
     static let shared = DrawModeManager()

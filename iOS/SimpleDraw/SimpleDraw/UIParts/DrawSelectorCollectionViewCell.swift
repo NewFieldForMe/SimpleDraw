@@ -41,12 +41,23 @@ class DrawSelectorCollectionViewCell: UICollectionViewCell {
             titleLabel.text = "消し\nゴム"
         case DrawModeManager.DrawModeEnum.AllErase:
             titleLabel.text = "全\n消去"
+        case DrawModeManager.DrawModeEnum.CartoonSelect:
+            titleLabel.text = "ぬり\nえ"
         }
     }
     
     func colorSetup(color: UIColor) {
+        imageView.contentMode = .scaleAspectFill
         imageView.image = UIImage(named: "background1")?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
         imageView.tintColor = color
+        titleLabel.isHidden = true
+    }
+    
+    func cartoonSetup(index: Int) {
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = CartoonManager.shared.cartoonImages[index]
+        imageView.isHidden = false
+        imageView.backgroundColor = UIColor.white
         titleLabel.isHidden = true
     }
     

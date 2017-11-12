@@ -13,6 +13,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     @IBOutlet weak var drawSelectorCollectionView: UICollectionView!
     @IBOutlet weak var drawImageView: DrawImageView!
+    @IBOutlet weak var catoonImageView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         self.drawSelectorCollectionView.delegate = self;
         
         drawSelectorCollectionView.backgroundColor = UIColor(patternImage: UIImage(named: "transparent")!)
+        drawImageView.currentColor = ColorSettings.shared.Colors[0]
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,6 +49,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 cell?.settingSetup(settingMode: DrawModeManager.DrawModeEnum.Eraser)
             case 3:
                 cell?.settingSetup(settingMode: DrawModeManager.DrawModeEnum.AllErase)
+            case 4:
+                cell?.settingSetup(settingMode: DrawModeManager.DrawModeEnum.CartoonSelect)
             default:
                 print("error")
             }
@@ -56,6 +60,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 cell?.colorSetup(color: ColorSettings.shared.Colors[indexPath.item])
             case .ThicknessSelect:
                 cell?.thicknessSetup(thickness: CGFloat(indexPath.item + 1) * 3.0)
+            case .CartoonSelect:
+                cell?.cartoonSetup(index: indexPath.item)
             default: break
             }
         }
@@ -66,7 +72,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch(section){
         case 0:
-            return 4
+            return 5
         case 1:
             switch DrawModeManager.shared.DrawMode {
             case .ColorSelect:
@@ -77,6 +83,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 return 10
             case .AllErase:
                 return 0
+            case .CartoonSelect:
+                return CartoonManager.shared.cartoonImages.count
             }
         default:
             return 0
@@ -95,7 +103,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             drawSelectorCollectionView.reloadData()
             switch DrawModeManager.shared.DrawMode {
             case .AllErase:
-                allErase()
+                allErase(completion: nil)
             default: break
             }
         } else if indexPath.section == 1 {
@@ -104,6 +112,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 drawImageView.currentColor = ColorSettings.shared.Colors[indexPath.item]
             case .ThicknessSelect:
                 drawImageView.currentThickness = CGFloat(indexPath.item + 1) * 3.0
+            case .CartoonSelect:
+                allErase(completion: {
+                    self.catoonImageView.image = CartoonManager.shared.cartoonImages[indexPath.item]
+                })
             default: break
             }
         }
@@ -113,9 +125,18 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         return 2
     }
     
-    private func allErase() {
+    private func allErase(completion: (()->Void)?) {
         let alert = UIAlertController(title: "確認", message: "全消去します。\nよろしいですか？", preferredStyle: UIAlertControllerStyle.alert)
         let ok = UIAlertAction(title: "OK", style: UIAlertActionStyle.default){ (action: UIAlertAction) in
+            UIView.transition(with: self.catoonImageView, duration: 1.0, options: [.transitionCurlUp], animations: {
+                self.catoonImageView.isHidden = true
+            }) { _ in
+                self.catoonImageView.image = nil
+                self.catoonImageView.isHidden = false
+                DrawModeManager.shared.DrawMode = .ColorSelect
+                self.drawSelectorCollectionView.reloadData()
+            }
+            
             UIView.transition(with: self.drawImageView, duration: 1.0, options: [.transitionCurlUp], animations: {
                 self.drawImageView.isHidden = true
             }) { _ in
@@ -123,6 +144,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 self.drawImageView.isHidden = false
                 DrawModeManager.shared.DrawMode = .ColorSelect
                 self.drawSelectorCollectionView.reloadData()
+                completion?()
             }
         }
         let cancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)

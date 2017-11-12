@@ -18,6 +18,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="itr-Ai-BOA" userLabel="drawBaseView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="567"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background1" translatesAutoresizingMaskIntoConstraints="NO" id="Xan-ea-uSR" userLabel="backgroundView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pa2-S9-faU" userLabel="drawView" customClass="DrawImageView" customModule="SimpleDraw" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nbw-im-Jgb" userLabel="cartoonView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="nbw-im-Jgb" firstAttribute="bottom" secondItem="pa2-S9-faU" secondAttribute="bottom" id="8zd-CB-o2k"/>
+                                    <constraint firstItem="pa2-S9-faU" firstAttribute="leading" secondItem="itr-Ai-BOA" secondAttribute="leading" id="KFB-kQ-Ycz"/>
+                                    <constraint firstItem="pa2-S9-faU" firstAttribute="top" secondItem="itr-Ai-BOA" secondAttribute="top" id="Wlc-xL-bOm"/>
+                                    <constraint firstAttribute="bottom" secondItem="pa2-S9-faU" secondAttribute="bottom" id="b36-LU-E2K"/>
+                                    <constraint firstItem="nbw-im-Jgb" firstAttribute="trailing" secondItem="pa2-S9-faU" secondAttribute="trailing" id="nTS-eC-hoF"/>
+                                    <constraint firstItem="nbw-im-Jgb" firstAttribute="leading" secondItem="pa2-S9-faU" secondAttribute="leading" id="uVb-xt-AXT"/>
+                                    <constraint firstItem="nbw-im-Jgb" firstAttribute="top" secondItem="pa2-S9-faU" secondAttribute="top" id="utn-md-n91"/>
+                                    <constraint firstAttribute="trailing" secondItem="pa2-S9-faU" secondAttribute="trailing" id="wOh-eI-n1O"/>
+                                </constraints>
+                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sit-1K-eCr">
                                 <rect key="frame" x="0.0" y="587" width="375" height="80"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -41,32 +67,6 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="itr-Ai-BOA" userLabel="drawBaseView">
-                                <rect key="frame" x="0.0" y="20" width="375" height="567"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background1" translatesAutoresizingMaskIntoConstraints="NO" id="Xan-ea-uSR" userLabel="backgroundView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pa2-S9-faU" userLabel="drawView" customClass="DrawImageView" customModule="SimpleDraw" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pig" translatesAutoresizingMaskIntoConstraints="NO" id="nbw-im-Jgb" userLabel="cartoonView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="nbw-im-Jgb" firstAttribute="bottom" secondItem="pa2-S9-faU" secondAttribute="bottom" id="8zd-CB-o2k"/>
-                                    <constraint firstItem="pa2-S9-faU" firstAttribute="leading" secondItem="itr-Ai-BOA" secondAttribute="leading" id="KFB-kQ-Ycz"/>
-                                    <constraint firstItem="pa2-S9-faU" firstAttribute="top" secondItem="itr-Ai-BOA" secondAttribute="top" id="Wlc-xL-bOm"/>
-                                    <constraint firstAttribute="bottom" secondItem="pa2-S9-faU" secondAttribute="bottom" id="b36-LU-E2K"/>
-                                    <constraint firstItem="nbw-im-Jgb" firstAttribute="trailing" secondItem="pa2-S9-faU" secondAttribute="trailing" id="nTS-eC-hoF"/>
-                                    <constraint firstItem="nbw-im-Jgb" firstAttribute="leading" secondItem="pa2-S9-faU" secondAttribute="leading" id="uVb-xt-AXT"/>
-                                    <constraint firstItem="nbw-im-Jgb" firstAttribute="top" secondItem="pa2-S9-faU" secondAttribute="top" id="utn-md-n91"/>
-                                    <constraint firstAttribute="trailing" secondItem="pa2-S9-faU" secondAttribute="trailing" id="wOh-eI-n1O"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -81,6 +81,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="catoonImageView" destination="nbw-im-Jgb" id="Ipj-m9-QWe"/>
                         <outlet property="drawImageView" destination="pa2-S9-faU" id="Phd-DA-KJa"/>
                         <outlet property="drawSelectorCollectionView" destination="sit-1K-eCr" id="2lp-Ww-lop"/>
                     </connections>
@@ -91,6 +92,5 @@
     </scenes>
     <resources>
         <image name="background1" width="1280" height="894"/>
-        <image name="pig" width="323" height="298"/>
     </resources>
 </document>
