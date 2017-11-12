@@ -103,7 +103,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             drawSelectorCollectionView.reloadData()
             switch DrawModeManager.shared.DrawMode {
             case .AllErase:
-                allErase(completion: nil)
+                allEraseWithAlert(completion: nil)
             default: break
             }
         } else if indexPath.section == 1 {
@@ -113,7 +113,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             case .ThicknessSelect:
                 drawImageView.currentThickness = CGFloat(indexPath.item + 1) * 3.0
             case .CartoonSelect:
-                allErase(completion: {
+                allEraseWithAlert(completion: {
                     self.catoonImageView.image = CartoonManager.shared.cartoonImages[indexPath.item]
                 })
             default: break
@@ -125,31 +125,40 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         return 2
     }
     
-    private func allErase(completion: (()->Void)?) {
-        let alert = UIAlertController(title: "確認", message: "全消去します。\nよろしいですか？", preferredStyle: UIAlertControllerStyle.alert)
-        let ok = UIAlertAction(title: "OK", style: UIAlertActionStyle.default){ (action: UIAlertAction) in
-            UIView.transition(with: self.catoonImageView, duration: 1.0, options: [.transitionCurlUp], animations: {
-                self.catoonImageView.isHidden = true
-            }) { _ in
-                self.catoonImageView.image = nil
-                self.catoonImageView.isHidden = false
-                DrawModeManager.shared.DrawMode = .ColorSelect
-                self.drawSelectorCollectionView.reloadData()
+    private func allEraseWithAlert(completion: (()->Void)?) {
+        if DrawModeManager.shared.alreadyTouch == true {
+            let alert = UIAlertController(title: "確認", message: "全消去します。\nよろしいですか？", preferredStyle: UIAlertControllerStyle.alert)
+            let ok = UIAlertAction(title: "OK", style: UIAlertActionStyle.default){ (action: UIAlertAction) in
+                self.allErase(completion: completion)
             }
-            
-            UIView.transition(with: self.drawImageView, duration: 1.0, options: [.transitionCurlUp], animations: {
-                self.drawImageView.isHidden = true
-            }) { _ in
-                self.drawImageView.image = nil
-                self.drawImageView.isHidden = false
-                DrawModeManager.shared.DrawMode = .ColorSelect
-                self.drawSelectorCollectionView.reloadData()
-                completion?()
-            }
+            let cancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)
+            alert.addAction(ok)
+            alert.addAction(cancel)
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            allErase(completion: completion)
         }
-        let cancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)
-        alert.addAction(ok)
-        alert.addAction(cancel)
-        self.present(alert, animated: true, completion: nil)
+    }
+    
+    private func allErase(completion: (()->Void)?) {
+        UIView.transition(with: self.catoonImageView, duration: 1.0, options: [.transitionCurlUp], animations: {
+            self.catoonImageView.isHidden = true
+        }) { _ in
+            self.catoonImageView.image = nil
+            self.catoonImageView.isHidden = false
+            DrawModeManager.shared.DrawMode = .ColorSelect
+            self.drawSelectorCollectionView.reloadData()
+        }
+        
+        UIView.transition(with: self.drawImageView, duration: 1.0, options: [.transitionCurlUp], animations: {
+            self.drawImageView.isHidden = true
+        }) { _ in
+            self.drawImageView.image = nil
+            self.drawImageView.isHidden = false
+            DrawModeManager.shared.DrawMode = .ColorSelect
+            self.drawSelectorCollectionView.reloadData()
+            completion?()
+        }
+        DrawModeManager.shared.alreadyTouch = false
     }
 }

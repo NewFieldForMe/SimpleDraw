@@ -17,6 +17,7 @@ class DrawModeManager {
         case CartoonSelect = 4
     }
     var DrawMode: DrawModeEnum
+    var alreadyTouch: Bool = false
     
     static let shared = DrawModeManager()
     private init() {

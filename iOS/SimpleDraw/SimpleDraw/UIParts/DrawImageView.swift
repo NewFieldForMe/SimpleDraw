@@ -21,6 +21,7 @@ class DrawImageView: UIImageView {
         bezier.lineCapStyle = CGLineCap.round
         bezier.lineJoinStyle = .round
         bezier.move(to: lastPoint)
+        DrawModeManager.shared.alreadyTouch = true
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
