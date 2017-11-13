@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		228B524475CAB57ADBA1D4B0 /* Pods_SimpleDrawUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A2DB84EE492178A609F126C /* Pods_SimpleDrawUITests.framework */; };
+		579B4E8BDA66558955115B0B /* Pods_SimpleDrawTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBAFE4514A73D9BE179580C6 /* Pods_SimpleDrawTests.framework */; };
+		742FB5BA324FF40CBE5250E4 /* Pods_SimpleDraw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07967964F7DBD148CD84B24 /* Pods_SimpleDraw.framework */; };
 		921652DE1FAF4708001FEB5B /* DrawModeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921652DD1FAF4708001FEB5B /* DrawModeManager.swift */; };
 		928904581FAD691F006EFDDF /* DrawSelectorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 928904571FAD691F006EFDDF /* DrawSelectorCollectionViewCell.xib */; };
 		9289045A1FAD6935006EFDDF /* DrawSelectorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928904591FAD6935006EFDDF /* DrawSelectorCollectionViewCell.swift */; };
@@ -14,6 +17,7 @@
 		9289045F1FAD851D006EFDDF /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9289045E1FAD851D006EFDDF /* UIColorExtension.swift */; };
 		928904611FADA441006EFDDF /* DrawImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928904601FADA441006EFDDF /* DrawImageView.swift */; };
 		92A0A4CF1FB8509D00BE88E1 /* CartoonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A0A4CE1FB8509D00BE88E1 /* CartoonManager.swift */; };
+		92B8AB7D1FB9BFC2005DBC17 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B8AB7C1FB9BFC2005DBC17 /* APIManager.swift */; };
 		92D22A791FAC12C400715487 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D22A781FAC12C400715487 /* AppDelegate.swift */; };
 		92D22A7B1FAC12C400715487 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D22A7A1FAC12C400715487 /* ViewController.swift */; };
 		92D22A7E1FAC12C400715487 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92D22A7C1FAC12C400715487 /* Main.storyboard */; };
@@ -41,6 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		125AAD58AFB62678ED0A01A7 /* Pods-SimpleDraw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleDraw.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleDraw/Pods-SimpleDraw.debug.xcconfig"; sourceTree = "<group>"; };
+		2A2DB84EE492178A609F126C /* Pods_SimpleDrawUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleDrawUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A1D28707F36D741A72610E7 /* Pods-SimpleDraw.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleDraw.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleDraw/Pods-SimpleDraw.release.xcconfig"; sourceTree = "<group>"; };
+		6CFD82243AB414E27EAB59C2 /* Pods-SimpleDrawTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleDrawTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleDrawTests/Pods-SimpleDrawTests.release.xcconfig"; sourceTree = "<group>"; };
 		921652DD1FAF4708001FEB5B /* DrawModeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawModeManager.swift; sourceTree = "<group>"; };
 		928904571FAD691F006EFDDF /* DrawSelectorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrawSelectorCollectionViewCell.xib; sourceTree = "<group>"; };
 		928904591FAD6935006EFDDF /* DrawSelectorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawSelectorCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -48,6 +56,7 @@
 		9289045E1FAD851D006EFDDF /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		928904601FADA441006EFDDF /* DrawImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawImageView.swift; sourceTree = "<group>"; };
 		92A0A4CE1FB8509D00BE88E1 /* CartoonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartoonManager.swift; sourceTree = "<group>"; };
+		92B8AB7C1FB9BFC2005DBC17 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		92D22A751FAC12C400715487 /* SimpleDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D22A781FAC12C400715487 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92D22A7A1FAC12C400715487 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +70,11 @@
 		92D22A941FAC12C400715487 /* SimpleDrawUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleDrawUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D22A981FAC12C400715487 /* SimpleDrawUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDrawUITests.swift; sourceTree = "<group>"; };
 		92D22A9A1FAC12C400715487 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D99046A06BA39DAB03C7CDC /* Pods-SimpleDrawUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleDrawUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleDrawUITests/Pods-SimpleDrawUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D7070563F67E3ADEA3849D09 /* Pods-SimpleDrawTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleDrawTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleDrawTests/Pods-SimpleDrawTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E05969536A109FDFD3DD01F7 /* Pods-SimpleDrawUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleDrawUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleDrawUITests/Pods-SimpleDrawUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E07967964F7DBD148CD84B24 /* Pods_SimpleDraw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleDraw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBAFE4514A73D9BE179580C6 /* Pods_SimpleDrawTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleDrawTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				742FB5BA324FF40CBE5250E4 /* Pods_SimpleDraw.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				579B4E8BDA66558955115B0B /* Pods_SimpleDrawTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,12 +98,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				228B524475CAB57ADBA1D4B0 /* Pods_SimpleDrawUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06B2AFB10F02DE0968621649 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				125AAD58AFB62678ED0A01A7 /* Pods-SimpleDraw.debug.xcconfig */,
+				3A1D28707F36D741A72610E7 /* Pods-SimpleDraw.release.xcconfig */,
+				D7070563F67E3ADEA3849D09 /* Pods-SimpleDrawTests.debug.xcconfig */,
+				6CFD82243AB414E27EAB59C2 /* Pods-SimpleDrawTests.release.xcconfig */,
+				E05969536A109FDFD3DD01F7 /* Pods-SimpleDrawUITests.debug.xcconfig */,
+				9D99046A06BA39DAB03C7CDC /* Pods-SimpleDrawUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6A087479AA7AC1FD028E4834 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E07967964F7DBD148CD84B24 /* Pods_SimpleDraw.framework */,
+				FBAFE4514A73D9BE179580C6 /* Pods_SimpleDrawTests.framework */,
+				2A2DB84EE492178A609F126C /* Pods_SimpleDrawUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		928904561FAD68F2006EFDDF /* UIParts */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +145,7 @@
 				9289045E1FAD851D006EFDDF /* UIColorExtension.swift */,
 				921652DD1FAF4708001FEB5B /* DrawModeManager.swift */,
 				92A0A4CE1FB8509D00BE88E1 /* CartoonManager.swift */,
+				92B8AB7C1FB9BFC2005DBC17 /* APIManager.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -116,6 +157,8 @@
 				92D22A8C1FAC12C400715487 /* SimpleDrawTests */,
 				92D22A971FAC12C400715487 /* SimpleDrawUITests */,
 				92D22A761FAC12C400715487 /* Products */,
+				06B2AFB10F02DE0968621649 /* Pods */,
+				6A087479AA7AC1FD028E4834 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,9 +212,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92D22A9D1FAC12C400715487 /* Build configuration list for PBXNativeTarget "SimpleDraw" */;
 			buildPhases = (
+				328DFA17E49E4AC37676EBF2 /* [CP] Check Pods Manifest.lock */,
 				92D22A711FAC12C400715487 /* Sources */,
 				92D22A721FAC12C400715487 /* Frameworks */,
 				92D22A731FAC12C400715487 /* Resources */,
+				6020AC612F4D31CE2D3C3D06 /* [CP] Embed Pods Frameworks */,
+				F0F28C939F99602196200E6B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -186,9 +232,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92D22AA01FAC12C400715487 /* Build configuration list for PBXNativeTarget "SimpleDrawTests" */;
 			buildPhases = (
+				6C012BF8A33079AAE3F2FA32 /* [CP] Check Pods Manifest.lock */,
 				92D22A851FAC12C400715487 /* Sources */,
 				92D22A861FAC12C400715487 /* Frameworks */,
 				92D22A871FAC12C400715487 /* Resources */,
+				B7A0BF1472A5A474BA0F29CA /* [CP] Embed Pods Frameworks */,
+				103A94C4893F9D7E13137D44 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -204,9 +253,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92D22AA31FAC12C400715487 /* Build configuration list for PBXNativeTarget "SimpleDrawUITests" */;
 			buildPhases = (
+				80380A937B52329FF1D52C42 /* [CP] Check Pods Manifest.lock */,
 				92D22A901FAC12C400715487 /* Sources */,
 				92D22A911FAC12C400715487 /* Frameworks */,
 				92D22A921FAC12C400715487 /* Resources */,
+				312D5947CA2D8CF83A4796FF /* [CP] Embed Pods Frameworks */,
+				A13E89137B70D6B087178F23 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -292,6 +344,160 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		103A94C4893F9D7E13137D44 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleDrawTests/Pods-SimpleDrawTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		312D5947CA2D8CF83A4796FF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleDrawUITests/Pods-SimpleDrawUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		328DFA17E49E4AC37676EBF2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimpleDraw-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6020AC612F4D31CE2D3C3D06 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SimpleDraw/Pods-SimpleDraw-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleDraw/Pods-SimpleDraw-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C012BF8A33079AAE3F2FA32 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimpleDrawTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80380A937B52329FF1D52C42 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimpleDrawUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A13E89137B70D6B087178F23 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleDrawUITests/Pods-SimpleDrawUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7A0BF1472A5A474BA0F29CA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleDrawTests/Pods-SimpleDrawTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0F28C939F99602196200E6B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleDraw/Pods-SimpleDraw-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		92D22A711FAC12C400715487 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -300,6 +506,7 @@
 				928904611FADA441006EFDDF /* DrawImageView.swift in Sources */,
 				92D22A7B1FAC12C400715487 /* ViewController.swift in Sources */,
 				92D22A791FAC12C400715487 /* AppDelegate.swift in Sources */,
+				92B8AB7D1FB9BFC2005DBC17 /* APIManager.swift in Sources */,
 				921652DE1FAF4708001FEB5B /* DrawModeManager.swift in Sources */,
 				9289045F1FAD851D006EFDDF /* UIColorExtension.swift in Sources */,
 				92A0A4CF1FB8509D00BE88E1 /* CartoonManager.swift in Sources */,
@@ -468,6 +675,7 @@
 		};
 		92D22A9E1FAC12C400715487 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 125AAD58AFB62678ED0A01A7 /* Pods-SimpleDraw.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -486,6 +694,7 @@
 		};
 		92D22A9F1FAC12C400715487 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A1D28707F36D741A72610E7 /* Pods-SimpleDraw.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -504,6 +713,7 @@
 		};
 		92D22AA11FAC12C400715487 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7070563F67E3ADEA3849D09 /* Pods-SimpleDrawTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -521,6 +731,7 @@
 		};
 		92D22AA21FAC12C400715487 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CFD82243AB414E27EAB59C2 /* Pods-SimpleDrawTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -538,6 +749,7 @@
 		};
 		92D22AA41FAC12C400715487 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E05969536A109FDFD3DD01F7 /* Pods-SimpleDrawUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -554,6 +766,7 @@
 		};
 		92D22AA51FAC12C400715487 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D99046A06BA39DAB03C7CDC /* Pods-SimpleDrawUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

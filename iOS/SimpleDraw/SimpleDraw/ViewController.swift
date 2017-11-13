@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 @available(iOS 11.0, *)
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UITableViewDelegate {
@@ -14,10 +15,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @IBOutlet weak var drawSelectorCollectionView: UICollectionView!
     @IBOutlet weak var drawImageView: DrawImageView!
     @IBOutlet weak var catoonImageView: UIImageView!
+    
+    var disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         let nib: UINib = UINib(nibName: "DrawSelectorCollectionViewCell", bundle: nil)
         drawSelectorCollectionView.register(nib, forCellWithReuseIdentifier: "DrawSelectorCollectionViewCell")
         
@@ -104,6 +106,18 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             switch DrawModeManager.shared.DrawMode {
             case .AllErase:
                 allEraseWithAlert(completion: nil)
+            case .CartoonSelect:
+                // 下絵のリストAPIを叩いて、JSON取得完了時にリストを作り直す
+                CartoonManager.shared.getCartoonList().subscribe(
+                    onNext: {(json) in
+                        self.drawSelectorCollectionView.reloadData()
+                    },
+                    onError: {(error) in
+                        print(error)
+                    },
+                    onCompleted: {
+                    }
+                ).disposed(by: self.disposeBag)
             default: break
             }
         } else if indexPath.section == 1 {

@@ -8,14 +8,21 @@
 
 import Foundation
 import UIKit
+import RxSwift
+import SwiftyJSON
 
 class CartoonManager {
     static let shared = CartoonManager()
     var cartoonImages: [UIImage] = []
     private init() {
-        cartoonImages.append(UIImage(named: "cow")!)
-        cartoonImages.append(UIImage(named: "horse")!)
-        cartoonImages.append(UIImage(named: "mouse")!)
-        cartoonImages.append(UIImage(named: "pig")!)
+    }
+    func getCartoonList() -> Observable<JSON>{
+        return APIManager.shared.getCartoonListAPI().flatMap({ (json) -> Observable<JSON> in
+            self.cartoonImages.removeAll()
+            for object in json["cartoon_list"].arrayValue {
+                self.cartoonImages.append(UIImage(named: object["name"].string!)!)
+            }
+            return Observable.just(json)
+        })
     }
 }
