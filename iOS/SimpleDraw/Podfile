@@ -9,6 +9,7 @@ target 'SimpleDraw' do
   pod 'RxSwift',  '~> 4.0'
   pod 'Alamofire', '~> 4.5'
   pod 'SwiftyJSON'
+  pod 'SVProgressHUD'
 
   target 'SimpleDrawTests' do
     inherit! :search_paths

@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import SVProgressHUD
 
 @available(iOS 11.0, *)
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UITableViewDelegate {
@@ -107,13 +108,18 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             case .AllErase:
                 allEraseWithAlert(completion: nil)
             case .CartoonSelect:
+                SVProgressHUD.setDefaultMaskType(.black)
+                SVProgressHUD.show(withStatus: "通信中...")
                 // 下絵のリストAPIを叩いて、JSON取得完了時にリストを作り直す
                 CartoonManager.shared.getCartoonList().subscribe(
                     onNext: {(json) in
                         self.drawSelectorCollectionView.reloadData()
+                        SVProgressHUD.dismiss()
                     },
                     onError: {(error) in
+                        SVProgressHUD.dismiss()
                         print(error)
+                        SVProgressHUD.showError(withStatus: "通信に失敗しました。")
                     },
                     onCompleted: {
                     }
