@@ -11,11 +11,13 @@ import UIKit
 import RxSwift
 import SwiftyJSON
 
+// 塗り絵の下絵をコントロールするシングルトンクラス
 class CartoonManager {
     static let shared = CartoonManager()
     var cartoonImages: [UIImage] = []
     private init() {
     }
+    // 下絵のリストを取得できるAPIをコールして下絵リストを作る
     func getCartoonList() -> Observable<JSON>{
         return APIManager.shared.getCartoonListAPI().flatMap({ (json) -> Observable<JSON> in
             self.cartoonImages.removeAll()

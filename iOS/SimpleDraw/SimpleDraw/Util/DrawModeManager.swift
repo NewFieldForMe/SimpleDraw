@@ -8,7 +8,11 @@
 
 import Foundation
 
+// 描画モードのシングルトンクラス
 class DrawModeManager {
+    static let shared = DrawModeManager()
+    var DrawMode: DrawModeEnum
+    var alreadyTouch: Bool = false
     enum DrawModeEnum: Int {
         case ColorSelect = 0
         case ThicknessSelect = 1
@@ -16,10 +20,7 @@ class DrawModeManager {
         case AllErase = 3
         case CartoonSelect = 4
     }
-    var DrawMode: DrawModeEnum
-    var alreadyTouch: Bool = false
-    
-    static let shared = DrawModeManager()
+
     private init() {
         DrawMode = DrawModeEnum.ColorSelect
     }

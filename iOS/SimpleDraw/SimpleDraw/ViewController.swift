@@ -28,7 +28,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         self.drawSelectorCollectionView.delegate = self;
         
         drawSelectorCollectionView.backgroundColor = UIColor(patternImage: UIImage(named: "transparent")!)
-        drawImageView.currentColor = ColorSettings.shared.Colors[0]
+        drawImageView.currentColor = ColorSettingsManager.shared.Colors[0]
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,7 +60,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         } else if indexPath.section == 1 {
             switch DrawModeManager.shared.DrawMode {
             case .ColorSelect:
-                cell?.colorSetup(color: ColorSettings.shared.Colors[indexPath.item])
+                cell?.colorSetup(color: ColorSettingsManager.shared.Colors[indexPath.item])
             case .ThicknessSelect:
                 cell?.thicknessSetup(thickness: CGFloat(indexPath.item + 1) * 3.0)
             case .CartoonSelect:
@@ -107,6 +107,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             switch DrawModeManager.shared.DrawMode {
             case .AllErase:
                 allEraseWithAlert(completion: nil)
+                DrawModeManager.shared.DrawMode = .ColorSelect
             case .CartoonSelect:
                 SVProgressHUD.setDefaultMaskType(.black)
                 SVProgressHUD.show(withStatus: "通信中...")
@@ -129,7 +130,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         } else if indexPath.section == 1 {
             switch DrawModeManager.shared.DrawMode {
             case .ColorSelect:
-                drawImageView.currentColor = ColorSettings.shared.Colors[indexPath.item]
+                drawImageView.currentColor = ColorSettingsManager.shared.Colors[indexPath.item]
             case .ThicknessSelect:
                 drawImageView.currentThickness = CGFloat(indexPath.item + 1) * 3.0
             case .CartoonSelect:
@@ -145,6 +146,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         return 2
     }
     
+    // 全消去の確認アラートを表示して全消去を実行する
     private func allEraseWithAlert(completion: (()->Void)?) {
         if DrawModeManager.shared.alreadyTouch == true {
             let alert = UIAlertController(title: "確認", message: "全消去します。\nよろしいですか？", preferredStyle: UIAlertControllerStyle.alert)
@@ -160,13 +162,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
     }
     
+    // 全消去を行う
     private func allErase(completion: (()->Void)?) {
         UIView.transition(with: self.catoonImageView, duration: 1.0, options: [.transitionCurlUp], animations: {
             self.catoonImageView.isHidden = true
         }) { _ in
             self.catoonImageView.image = nil
             self.catoonImageView.isHidden = false
-            DrawModeManager.shared.DrawMode = .ColorSelect
             self.drawSelectorCollectionView.reloadData()
         }
         
@@ -175,7 +177,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }) { _ in
             self.drawImageView.image = nil
             self.drawImageView.isHidden = false
-            DrawModeManager.shared.DrawMode = .ColorSelect
             self.drawSelectorCollectionView.reloadData()
             completion?()
         }

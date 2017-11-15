@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-class ColorSettings {
-    static let shared = ColorSettings()
-    
+// 色選択を行うシングルトンクラス
+class ColorSettingsManager {
+    static let shared = ColorSettingsManager()
     var Colors: Array<UIColor> = Array()
     
     private init() {

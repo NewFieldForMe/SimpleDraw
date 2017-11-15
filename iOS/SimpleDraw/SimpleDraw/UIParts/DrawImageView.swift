@@ -8,6 +8,7 @@
 
 import UIKit
 
+// タッチで描画するView
 class DrawImageView: UIImageView {
     
     var lastPoint: CGPoint!
@@ -34,6 +35,7 @@ class DrawImageView: UIImageView {
         
     }
     
+    // ベジェ曲線の描画
     private func drawLine() {
         guard let color = currentColor else {
             return

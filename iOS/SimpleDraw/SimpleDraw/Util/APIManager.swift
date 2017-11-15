@@ -11,15 +11,16 @@ import RxSwift
 import Alamofire
 import SwiftyJSON
 
+// APIコールを司るシングルトンクラス
 class APIManager {
     static let shared = APIManager()
-    
     let apiBase = "https://simpledraw-apis.herokuapp.com/api/"
     let cartoonlistURL = "cartoonlist"
-    
+
     private init() {
     }
     
+    // 汎用的なAPIコールメソッド
     private func request(url: String) -> Observable<JSON> {
         return Observable.create { (observer: AnyObserver<JSON>) in
             Alamofire.request(url).validate().responseJSON() { response in
@@ -36,6 +37,7 @@ class APIManager {
         }
     }
     
+    // 下絵リストのAPIをコールする
     func getCartoonListAPI() -> Observable<JSON> {
         return request(url: apiBase + cartoonlistURL)
     }

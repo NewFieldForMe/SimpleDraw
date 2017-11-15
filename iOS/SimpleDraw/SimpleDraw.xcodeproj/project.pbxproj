@@ -13,7 +13,7 @@
 		921652DE1FAF4708001FEB5B /* DrawModeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921652DD1FAF4708001FEB5B /* DrawModeManager.swift */; };
 		928904581FAD691F006EFDDF /* DrawSelectorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 928904571FAD691F006EFDDF /* DrawSelectorCollectionViewCell.xib */; };
 		9289045A1FAD6935006EFDDF /* DrawSelectorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928904591FAD6935006EFDDF /* DrawSelectorCollectionViewCell.swift */; };
-		9289045D1FAD8042006EFDDF /* ColorSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9289045C1FAD8042006EFDDF /* ColorSettings.swift */; };
+		9289045D1FAD8042006EFDDF /* ColorSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9289045C1FAD8042006EFDDF /* ColorSettingsManager.swift */; };
 		9289045F1FAD851D006EFDDF /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9289045E1FAD851D006EFDDF /* UIColorExtension.swift */; };
 		928904611FADA441006EFDDF /* DrawImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928904601FADA441006EFDDF /* DrawImageView.swift */; };
 		92A0A4CF1FB8509D00BE88E1 /* CartoonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A0A4CE1FB8509D00BE88E1 /* CartoonManager.swift */; };
@@ -52,7 +52,7 @@
 		921652DD1FAF4708001FEB5B /* DrawModeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawModeManager.swift; sourceTree = "<group>"; };
 		928904571FAD691F006EFDDF /* DrawSelectorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrawSelectorCollectionViewCell.xib; sourceTree = "<group>"; };
 		928904591FAD6935006EFDDF /* DrawSelectorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawSelectorCollectionViewCell.swift; sourceTree = "<group>"; };
-		9289045C1FAD8042006EFDDF /* ColorSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSettings.swift; sourceTree = "<group>"; };
+		9289045C1FAD8042006EFDDF /* ColorSettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSettingsManager.swift; sourceTree = "<group>"; };
 		9289045E1FAD851D006EFDDF /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		928904601FADA441006EFDDF /* DrawImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawImageView.swift; sourceTree = "<group>"; };
 		92A0A4CE1FB8509D00BE88E1 /* CartoonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartoonManager.swift; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 		9289045B1FAD802B006EFDDF /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				9289045C1FAD8042006EFDDF /* ColorSettings.swift */,
+				9289045C1FAD8042006EFDDF /* ColorSettingsManager.swift */,
 				9289045E1FAD851D006EFDDF /* UIColorExtension.swift */,
 				921652DD1FAF4708001FEB5B /* DrawModeManager.swift */,
 				92A0A4CE1FB8509D00BE88E1 /* CartoonManager.swift */,
@@ -512,7 +512,7 @@
 				921652DE1FAF4708001FEB5B /* DrawModeManager.swift in Sources */,
 				9289045F1FAD851D006EFDDF /* UIColorExtension.swift in Sources */,
 				92A0A4CF1FB8509D00BE88E1 /* CartoonManager.swift in Sources */,
-				9289045D1FAD8042006EFDDF /* ColorSettings.swift in Sources */,
+				9289045D1FAD8042006EFDDF /* ColorSettingsManager.swift in Sources */,
 				9289045A1FAD6935006EFDDF /* DrawSelectorCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
